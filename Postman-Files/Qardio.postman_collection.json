@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "3ef3f679-7972-478f-8646-51af4ee15013",
+		"name": "Qardio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Daily Aggregation Report",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/temperature/daily",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temperature",
+						"daily"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hourly Aggregation Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/temperature/hourly",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temperature",
+						"hourly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Temperature Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"deviceId\": \"test\",\r\n \"tempDegree\": 24.0,\r\n  \"date\": \"2022-06-20T13:32:59.286402400\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/temperature/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temperature",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk Save Temperature Datas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    [{\r\n     \"deviceId\": \"test2\",\r\n     \"tempDegree\": 21.0,\r\n     \"date\": \"2022-06-20T13:32:59.286402400\"\r\n    }, {\r\n     \"deviceId\": \"test1\",\r\n     \"tempDegree\": 28.0,\r\n     \"date\": \"2022-06-19T13:32:59.286402400\"\r\n    }]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/temperature/bulk-save?deviceId=test&tempDegree=23.0&date=2022-06-20T13:32:59.286402400",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temperature",
+						"bulk-save"
+					],
+					"query": [
+						{
+							"key": "deviceId",
+							"value": "test"
+						},
+						{
+							"key": "tempDegree",
+							"value": "23.0"
+						},
+						{
+							"key": "date",
+							"value": "2022-06-20T13:32:59.286402400"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
