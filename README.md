@@ -2,7 +2,7 @@
 
 ### Qardio - Temperature API
 
-#How To Run:
+*How To Run:
 - The project has been dockerized. In order to run the service, it is sufficient to call the **"docker-compose up"** command from the path of the project folder which include docker-compose.yaml.
   It can also be run by TemperatureApplication.java class. There are no need any environment variables.
 
@@ -17,7 +17,7 @@
 - The application was dockerized and a docker-compose.yml was written.
 
 
-#Sample Request And Response:
+*Sample Request And Response:
 
 You can find the sample json file for Postman under the **"Postman-Files"** directory under the project directory.
 
