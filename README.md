@@ -44,6 +44,7 @@ For Bulk Temperature Data Saving;
 **Post Url**: http://localhost:8080/temperature/bulk-save
 
 **Body**:
+```javascript
 [{
   "deviceId": "test2",
   "tempDegree": 21.0,
@@ -53,7 +54,7 @@ For Bulk Temperature Data Saving;
   "tempDegree": 28.0,
   "date": "2022-06-19T13:32:59.286402400"
 }]
-
+```
 **Response**:
 {
   "timestamp": "2022-06-20T12:08:34.9800912"
