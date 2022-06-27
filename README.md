@@ -1,7 +1,6 @@
-<h1 align="left"> Qardio Case Study </h1>
+<h1 align="left"> Qardio </h1>
 
-### Qardio Case Study - Temperature API
-In this project a REST microservice developed.
+### Qardio - Temperature API
 
 #How To Run:
 - The project has been dockerized. In order to run the service, it is sufficient to call the **"docker-compose up"** command from the path of the project folder which include docker-compose.yaml.
@@ -29,16 +28,20 @@ For Temperature Data Saving;
 **Post Url**: http://localhost:8080/temperature/save
 
 **Body**:
+```javascript
 {
  "deviceId": "test",
  "tempDegree": 24.0,
  "date": "2022-06-20T13:32:59.286402400"
 }
+```
 
 **Response**:
+```javascript
 {
     "timestamp": "2022-06-20T12:07:29.6026728"
 }
+```
 
 For Bulk Temperature Data Saving;
 **Post Url**: http://localhost:8080/temperature/bulk-save
@@ -56,22 +59,26 @@ For Bulk Temperature Data Saving;
 }]
 ```
 **Response**:
+```javascript
 {
   "timestamp": "2022-06-20T12:08:34.9800912"
 }
+```
 
 **-Sample Request and Response For Temperature Aggregate Data Report:**
 
 For Hourly Aggregate Data;
-**Get Url:** http://localhost:8080/temperature/hourly
+**URL:** http://localhost:8080/temperature/hourly
 
 For Daily Aggregate Data;
-**Get Url:** http://localhost:8080/temperature/daily
+**URL:** http://localhost:8080/temperature/daily
 
 **Response:**
+```javascript
 {
   "tempDataCount": 3,
   "averageTempDegree": 23.333333333333332,
   "minTempDegree": 21.0,
   "maxTempDegree": 25.0
 }
+```
